@@ -1,3 +1,12 @@
+<?php
+
+if(isset($_POST['username'])&& isset($_POST['password'])){
+    $u = $_POST['username'];
+    $p = $_POST['password'];
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
