@@ -20,9 +20,10 @@ class Prijava{
         $q = "SELECT * FROM prijave";
         return $conn->query($q);
     }
-
+    //DELETE
     public function deleteById(int $id, mysqli $conn){
         $q = "DELETE FROM prijave WHERE id=$id";
+        return $conn->query($q);
     }
 }
 

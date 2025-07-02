@@ -2,6 +2,7 @@
 
 require "dbBroker.php";
 require "model/prijava.php";
+require "handler/delete.php";
 session_start();
 
 if(!isset($_SESSION['user_id'])){
@@ -17,11 +18,7 @@ if(isset($_POST['submit']) && $_POST['submit'] == 'log_out'){
 
 $result = Prijava::getAll($conn);
 
-if(isset($_POST['submit']) && $_POST['submit']== 'Obrisi'){
-    $id = $_POST['id_predmeta'];
-    $prijava = new Prijava($id);
-    $obrisano = $prijava->deleteById($id, $conn);
-}
+
 ?>
 
 
