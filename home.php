@@ -1,5 +1,7 @@
 <?php
 
+require "dbBroker.php";
+require "model/prijava.php";
 session_start();
 
 if(!isset($_SESSION['user_id'])){
@@ -13,6 +15,7 @@ if(isset($_POST['submit']) && $_POST['submit'] == 'log_out'){
     exit();
 }
 
+$result = Prijava::getAll($conn);
 ?>
 
 
