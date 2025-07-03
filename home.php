@@ -1,8 +1,8 @@
 <?php
 
-require "dbBroker.php";
+require_once "dbBroker.php";
 require "model/prijava.php";
-require "handler/delete.php";
+//require "handler/delete.php";
 require "handler/add.php";
 require "handler/update.php";
 
@@ -200,6 +200,7 @@ $result = Prijava::getAll($conn);
             $('#datum').val(datum);
         });
     </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
